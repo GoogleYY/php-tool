@@ -83,6 +83,7 @@ function lxb($, window){
 		 * 执行操作
 		 */
 		app : {
+			c13 : 0,
 			pageSize : 20,
 			stop : 0,
 			clearStop : function(){
@@ -111,6 +112,7 @@ function lxb($, window){
 				return $c;
 			},
 			renderCount : function(){
+				lxb.app.c13 = 0;
 				var $fs = 3000;
 				if(lxb.app.getStop()){
 					return false;
@@ -126,12 +128,18 @@ function lxb($, window){
 	//                $.get('http://liuxos3.duapp.com/wx/rrd.php?c=' + $c);
 					$('#lxb-rep-count').val($c);
 					$('#lxb-rep-submit').click();
-					for(var i=0; i<=($c/lxb.app.pageSize); i++){
-						$('#chatAudio')[0].play();
-					}
+					$('#chatAudio0')[0].play();
+					setTimeout(function(){$('#chatAudio1')[0].play();}, 300);
+					setTimeout(function(){$('#chatAudio2')[0].play();}, 600);
 					$fs = 20000;
-					DN.Notify(DN.rrdIcon, "债券数量", '债券数量：' + $c);
+					DN.Notify(DN.rrdIcon, "债权数量", '债权数量：' + $c);
 					lxb.app.renderList($c, lxb.app.pageSize);
+					if(lxb.app.c13 > 0){
+						setTimeout(function(){$('#chatAudio3')[0].play();}, 100);
+						setTimeout(function(){$('#chatAudio4')[0].play();}, 300);
+						setTimeout(function(){$('#chatAudio5')[0].play();}, 600);
+						DN.Notify(DN.rrdIcon, "c13数量", 'c13数量：' + lxb.app.c13);
+					}
 				}
 				$('#lxb-showCon').html($c);
 				setTimeout(function(){lxb.app.renderCount()}, $fs);
@@ -163,6 +171,7 @@ function lxb($, window){
 							color = 'pink';
 						}
 						if(v.interest >= 13){
+							lxb.app.c13++;
 							color = 'red';
 						}
 						var $d = '<div class="list-item" style="overflow:hidden;float:left;margin:0;border:1px ' + color + ' solid;padding:3px;">';
@@ -215,7 +224,12 @@ function lxb($, window){
 				$dom += '<script>function showCon(){if($("#lxb").position().left < -10){$("#lxb").animate({left:"0px"}, 300, "swing");}else{$("#lxb").animate({left:"-830px"}, 300, "swing");}}$("#lxb-showCon").click(function(){showCon();});$("#lxb-item-box").click(function(){showCon();});</script>';
 				$dom += '<script>function RequestPermission(callback){window.Notification.requestPermission(callback);}$("#lxb-open-notify").click(function(){RequestPermission(function(){if (window.Notification.permission === "granted"){$("#lxb-open-notify").attr("checked", "true");}else{$("#lxb-open-notify").removeAttr("checked");}});});$("#lxb-open-notify").click();</script>';
 				$($dom).appendTo('body');
-				$('<audio id="chatAudio"><source src="http://www.helloweba.com/demo/notifysound/notify.ogg" type="audio/ogg"></audio>').appendTo('body');//载入声音文件 
+				$('<audio id="chatAudio0"><source src="http://www.helloweba.com/demo/notifysound/notify.ogg" type="audio/ogg"></audio>').appendTo('body');//载入声音文件 
+				$('<audio id="chatAudio1"><source src="http://www.helloweba.com/demo/notifysound/notify.ogg" type="audio/ogg"></audio>').appendTo('body');//载入声音文件 
+				$('<audio id="chatAudio2"><source src="http://www.helloweba.com/demo/notifysound/notify.ogg" type="audio/ogg"></audio>').appendTo('body');//载入声音文件 
+				$('<audio id="chatAudio3"><source src="http://www.helloweba.com/demo/notifysound/notify.ogg" type="audio/ogg"></audio>').appendTo('body');//载入声音文件 
+				$('<audio id="chatAudio4"><source src="http://www.helloweba.com/demo/notifysound/notify.ogg" type="audio/ogg"></audio>').appendTo('body');//载入声音文件 
+				$('<audio id="chatAudio5"><source src="http://www.helloweba.com/demo/notifysound/notify.ogg" type="audio/ogg"></audio>').appendTo('body');//载入声音文件 
 			}
 		},
 
