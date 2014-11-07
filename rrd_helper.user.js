@@ -132,13 +132,13 @@ function lxb($, window){
 					setTimeout(function(){$('#chatAudio1')[0].play();}, 300);
 					setTimeout(function(){$('#chatAudio2')[0].play();}, 600);
 					$fs = 20000;
-					DN.Notify(DN.rrdIcon, "债权数量", '债权数量：' + $c);
+					DN.Notify(DN.rrdIcon, "债权数量", '债权数量：' + $c + '\n' + t);
 					lxb.app.renderList($c, lxb.app.pageSize);
 					if(lxb.app.c13 > 0){
 						setTimeout(function(){$('#chatAudio3')[0].play();}, 100);
 						setTimeout(function(){$('#chatAudio4')[0].play();}, 300);
 						setTimeout(function(){$('#chatAudio5')[0].play();}, 600);
-						DN.Notify(DN.rrdIcon, "c13数量", 'c13数量：' + lxb.app.c13);
+						DN.Notify(DN.rrdIcon, "c13数量", 'c13数量：' + lxb.app.c13 + '\n' + t);
 					}
 				}
 				$('#lxb-showCon').html($c);
