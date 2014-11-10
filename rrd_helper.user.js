@@ -265,6 +265,7 @@ function lxb($, window){
 				try{
 					//DN.ontis.close();
 					eval('DN.' + ttt + '.close();');
+					eval('DN.ontis2.close();');
 				}catch(e){
 					console.log(e);
 				}
