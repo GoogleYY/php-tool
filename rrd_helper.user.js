@@ -28,280 +28,297 @@ if(typeof($) == "undefined"){
 }
 console.log('js2:jQuery is ' + typeof(jQuery));
 console.log('js2:$ is ' + typeof($));
-function lxb($, window, $debug){
-	var lxb = {
-		/**
-		 * Data
-		 */
-		data : {
-			page : {"data":{"transferList":[{"amount":null,"borrowerLevel":"A","buyerId":null,"createTime":null,"discountRatio":"1.000","displayLoanType":"SDRZ","fee":null,"id":"632836","inCorpus":null,"inPrice":null,"inShare":null,"income":null,"initialShare":null,"interest":"13.20","interestAndCorpus":null,"leftPhaseCount":"11","loanId":null,"loanTranfsferVo":null,"loanVo":null,"loantransferlogId":null,"months":null,"nextRepayDay":null,"outPrice":null,"outShare":null,"outSumPrice":null,"pricePerShare":"24.60","profit":null,"resultPice":"24.6","share":"29","title":"购买汽车","totalPricePershare":null,"tranfsferId":null},{"amount":null,"borrowerLevel":"A","buyerId":null,"createTime":null,"discountRatio":"1.000","displayLoanType":"SDRZ","fee":null,"id":"632837","inCorpus":null,"inPrice":null,"inShare":null,"income":null,"initialShare":null,"interest":"13.20","interestAndCorpus":null,"leftPhaseCount":"5","loanId":null,"loanTranfsferVo":null,"loanVo":null,"loantransferlogId":null,"months":null,"nextRepayDay":null,"outPrice":null,"outShare":null,"outSumPrice":null,"pricePerShare":"14.88","profit":null,"resultPice":"14.88","share":"20","title":"装饰材料进货","totalPricePershare":null,"tranfsferId":null},{"amount":null,"borrowerLevel":"A","buyerId":null,"createTime":null,"discountRatio":"1.000","displayLoanType":"SDRZ","fee":null,"id":"632840","inCorpus":null,"inPrice":null,"inShare":null,"income":null,"initialShare":null,"interest":"13.20","interestAndCorpus":null,"leftPhaseCount":"11","loanId":null,"loanTranfsferVo":null,"loanVo":null,"loantransferlogId":null,"months":null,"nextRepayDay":null,"outPrice":null,"outShare":null,"outSumPrice":null,"pricePerShare":"24.60","profit":null,"resultPice":"24.6","share":"30","title":"开店","totalPricePershare":null,"tranfsferId":null},{"amount":null,"borrowerLevel":"A","buyerId":null,"createTime":null,"discountRatio":"1.000","displayLoanType":"SDRZ","fee":null,"id":"632841","inCorpus":null,"inPrice":null,"inShare":null,"income":null,"initialShare":null,"interest":"13.20","interestAndCorpus":null,"leftPhaseCount":"11","loanId":null,"loanTranfsferVo":null,"loanVo":null,"loantransferlogId":null,"months":null,"nextRepayDay":null,"outPrice":null,"outShare":null,"outSumPrice":null,"pricePerShare":"24.60","profit":null,"resultPice":"24.6","share":"18","title":"购房","totalPricePershare":null,"tranfsferId":null},{"amount":null,"borrowerLevel":"A","buyerId":null,"createTime":null,"discountRatio":"1.000","displayLoanType":"SDRZ","fee":null,"id":"632842","inCorpus":null,"inPrice":null,"inShare":null,"income":null,"initialShare":null,"interest":"13.20","interestAndCorpus":null,"leftPhaseCount":"24","loanId":null,"loanTranfsferVo":null,"loanVo":null,"loantransferlogId":null,"months":null,"nextRepayDay":null,"outPrice":null,"outShare":null,"outSumPrice":null,"pricePerShare":"35.49","profit":null,"resultPice":"35.49","share":"17","title":"投资经营","totalPricePershare":null,"tranfsferId":null},{"amount":null,"borrowerLevel":"A","buyerId":null,"createTime":null,"discountRatio":"1.000","displayLoanType":"SDRZ","fee":null,"id":"632843","inCorpus":null,"inPrice":null,"inShare":null,"income":null,"initialShare":null,"interest":"13.20","interestAndCorpus":null,"leftPhaseCount":"13","loanId":null,"loanTranfsferVo":null,"loanVo":null,"loantransferlogId":null,"months":null,"nextRepayDay":null,"outPrice":null,"outShare":null,"outSumPrice":null,"pricePerShare":"29.04","profit":null,"resultPice":"29.04","share":"7","title":"购车","totalPricePershare":null,"tranfsferId":null},{"amount":null,"borrowerLevel":"A","buyerId":null,"createTime":null,"discountRatio":"1.000","displayLoanType":"SDRZ","fee":null,"id":"632844","inCorpus":null,"inPrice":null,"inShare":null,"income":null,"initialShare":null,"interest":"13.20","interestAndCorpus":null,"leftPhaseCount":"25","loanId":null,"loanTranfsferVo":null,"loanVo":null,"loantransferlogId":null,"months":null,"nextRepayDay":null,"outPrice":null,"outShare":null,"outSumPrice":null,"pricePerShare":"36.78","profit":null,"resultPice":"36.78","share":"19","title":"装修","totalPricePershare":null,"tranfsferId":null},{"amount":null,"borrowerLevel":"A","buyerId":null,"createTime":null,"discountRatio":"1.000","displayLoanType":"SDRZ","fee":null,"id":"632845","inCorpus":null,"inPrice":null,"inShare":null,"income":null,"initialShare":null,"interest":"13.20","interestAndCorpus":null,"leftPhaseCount":"13","loanId":null,"loanTranfsferVo":null,"loanVo":null,"loantransferlogId":null,"months":null,"nextRepayDay":null,"outPrice":null,"outShare":null,"outSumPrice":null,"pricePerShare":"28.74","profit":null,"resultPice":"28.74","share":"6","title":"日常消费","totalPricePershare":null,"tranfsferId":null},{"amount":null,"borrowerLevel":"A","buyerId":null,"createTime":null,"discountRatio":"1.000","displayLoanType":"SDRZ","fee":null,"id":"632846","inCorpus":null,"inPrice":null,"inShare":null,"income":null,"initialShare":null,"interest":"13.20","interestAndCorpus":null,"leftPhaseCount":"26","loanId":null,"loanTranfsferVo":null,"loanVo":null,"loantransferlogId":null,"months":null,"nextRepayDay":null,"outPrice":null,"outShare":null,"outSumPrice":null,"pricePerShare":"38.05","profit":null,"resultPice":"38.05","share":"25","title":"购买货物","totalPricePershare":null,"tranfsferId":null},{"amount":null,"borrowerLevel":"A","buyerId":null,"createTime":null,"discountRatio":"1.000","displayLoanType":"SDRZ","fee":null,"id":"632847","inCorpus":null,"inPrice":null,"inShare":null,"income":null,"initialShare":null,"interest":"13.20","interestAndCorpus":null,"leftPhaseCount":"26","loanId":null,"loanTranfsferVo":null,"loanVo":null,"loantransferlogId":null,"months":null,"nextRepayDay":null,"outPrice":null,"outShare":null,"outSumPrice":null,"pricePerShare":"38.05","profit":null,"resultPice":"38.05","share":"1","title":"借款人为酒店经理，借款装修","totalPricePershare":null,"tranfsferId":null}],"totalPage":1,"pageIndex":1},"message":"okay","status":0},
-			totalCount : '{"totalCount":5}',
-			userInfo : '{"avaliableBalance":"24.34","bindEmail":"true","bindMobile":"true","retResult":"success","setCashPass":"true","setIdentity":"true","userAvatar":null}',
-			buyform : {"code": "sdfs","agree-contract":"on","transferId":"U9pElc735Wk=","currentPrice":"39.02","share":25,"countRatio":0.00}
-		},
-
-		/**
-		 * url
-		 */
-		url : {
-			userInfo : 'http://www.renrendai.com/getHomePageUserInfo.action?timeout=5000&',
-			totalCount : 'http://www.renrendai.com/getUnreadMailsCount.action?',
-			page : 'http://www.renrendai.com/transfer/transferList!json.action?',
-			item : 'http://www.renrendai.com/transfer/loanTransferDetail.action?transferId=',
-			buy : 'http://www.renrendai.com/transfer/buyLoanTransfer.action',
-			image_https : 'http://www.renrendai.com/image_https.jsp',
-			image : 'http://www.renrendai.com/image.jsp?',
-			getItemUrl : function($url, $id){
-				return $url + $id;
-			},
-			getUrl : function($url){
-				var d = new Date;
-				var t = d.getTime();
-				return $url + '_=' + t;
-			},
-			getImageUrl : function($url){
-				var d = new Date;
-				var t = d.getTime();
-				return $url + 'ts=' + t;
-			},
-			getPageUrl : function($url, $page){
-				var d = new Date;
-				var t = d.getTime();
-				return $url + 'pageIndex=' + $page + '&_=' + t;
-			}
-		},
-
-		/**
-		 * http
-		 */
-		http : {
-			get : function($url){
-				var dataType = arguments[1] ? arguments[1] : 'json';
-				var $res;
-				$.ajax({
-					url: $url,
-					async: false,
-					dataType: dataType,
-					success: function(ddd){
-						console.log(ddd);
-						$res = ddd;
-					}
-				});
-				return $res;
-			}
-		},
-
-		/**
-		 * 执行操作
-		 */
-		app : {
-			c13 : 0,
-			pageSize : 20,
-			stop : 0,
-			clearStop : function(){
-				lxb.app.stop = 0;
-			},
-			setStop : function(){
-				$('#lxb-item-list').html('');
-				$('#lxb-showCon').html('clear...');
-				lxb.app.stop = 1;
-			},
-			getStop : function(){
-				return lxb.app.stop;
-			},
-			getCount : function(){
-				var $items = lxb.app.getPage(1);
-				if(!$items){
-					return 0;
-				}
-				var $pcount = $items.data.totalPage;
-				var $c = 0;
-				if($pcount == 1){
-					$c = $items.data.transferList.length;
-				}else{
-					$c = $pcount*lxb.app.pageSize;
-				}
-				return $c;
-			},
-			renderCount : function(){
-				lxb.app.c13 = 0;
-				var $fs = 3000;
-				if(lxb.app.getStop()){
-					return false;
-				}
-				$('#lxb-showCon').html('...');
-				var $c = lxb.app.getCount();
-				if($c > 0){
-					var t = '';
-					var D = new Date();
-					t += D.getHours() + ':' + D.getMinutes() + ':' + D.getSeconds();
-					$('#s_time').html(t);
-	//                app.setStop();
-	//                $.get('http://liuxos3.duapp.com/wx/rrd.php?c=' + $c);
-                            if(!$debug){
-					$('#lxb-rep-count').val($c);
-					$('#lxb-rep-submit').click();
-                            }
-					$('#chatAudio0')[0].play();
-					setTimeout(function(){$('#chatAudio1')[0].play();}, 300);
-					setTimeout(function(){$('#chatAudio2')[0].play();}, 600);
-					$fs = 20000;
-					DN.Notify(DN.rrdIcon, "债权数量", '债权数量：' + $c + '\n' + t);
-					lxb.app.renderList($c, lxb.app.pageSize);
-					if(lxb.app.c13 > 0){
-						setTimeout(function(){$('#chatAudio3')[0].play();}, 100);
-						setTimeout(function(){$('#chatAudio4')[0].play();}, 300);
-						setTimeout(function(){$('#chatAudio5')[0].play();}, 600);
-						DN.Notify(DN.rrdIcon, "c13数量", 'c13数量：' + lxb.app.c13 + '\n' + t, 'ontis2');
-					}
-				}
-				$('#lxb-showCon').html($c);
-				setTimeout(function(){lxb.app.renderCount()}, $fs);
-			},
-			getPage : function($page){
-                            if($debug){
-                                return lxb.data.page;
-                            }
-				var $url = lxb.url.getPageUrl(lxb.url.page, $page);
-				var $items = lxb.http.get($url);
-	//            var $items = data.page;
-	//            var data = $items.data;
-	//            var list = data.transferList;
-	//            var totalPage = data.totalPage;
-				return $items;
-			},
-			renderList : function($count, $pageSize){
-				$('#lxb-item-list').html('');
-				var $pages = $count/$pageSize;
-				if($pages <= 1){
-					$pages = 1;
-				}
-				for(var i=1; i<=$pages; i++){
-					var $items = lxb.app.getPage(i);
-					if(!$items){
-						continue;
-					}
-					var $list = $items.data.transferList;
-					$($list).each(function(k, v){
-						var color = 'gray';
-						if(v.interest >= 12){
-							color = 'pink';
-						}
-						if(v.interest >= 13){
-							lxb.app.c13++;
-							color = 'red';
-						}
-						var $d = '<div class="list-item" style="overflow:hidden;float:left;margin:0;border:1px ' + color + ' solid;padding:3px;">';
-                                                $d += '<button onclick=function(){jQuery(\'#lxb-buy-hide-transferId\').val(' + v.id + ');jQuery(\'#lxb-buy-hide-submit\').click()} >OO</button>|<a target="_blank" href="' + lxb.url.getItemUrl(lxb.url.item, v.id) + '">' + v.id + '</a>|' + v.interest + '|' + v.leftPhaseCount + '月|' + v.share + '份';
-						$d += '</div>';
-						$($d).appendTo($('#lxb-item-list'));
-					});
-				}
-			},
-			getAllPage : function(){
-				var $page = 1;
-				var $items = lxb.app.getPage($page);
-				var data = $items.data;
-				var list = data.transferList;
-				var totalPage = data.totalPage;
-				
-			},
-			getOnePage : function($id){
-				var $url = lxb.url.getItemUrl(lxb.url.item, $id);
-				var $one = lxb.http.get($url, 'text');
-				return $one;
-			}
-		},
-		
-		html : {
-			init : function(){
-				var $dom = '<div id="lxb" style="border:1px double red;background:#373b42;position:fixed;width:960px;height:500px;left:-830px;z-index:9999999;top:0;">';
-				$dom += '<div id="lxb-title" style="width:958px;height:30px;border-bottom:1px solid red;"><div id="s_time" style="color:red;"></div>';
-				$dom += '<div style="border:1px solid gray;line-height:28px;position: absolute;right:140px;top:0;"><input type="checkbox" id="lxb-open-notify">开启桌面通知</div>';
-				$dom += '<div id="lxb-showCon" style="border-left:1px solid red;position: absolute;right:0;top:0;width:120px;height:30px;float:right;padding:0 5px;color:red;font-size:22px;cursor:pointer;">O</div>';
-				$dom += '</div>';
-				$dom += '<div id="lxb-item-box" style="cursor:pointer;width:130px;height:468px;float:right;background:gray;">';
-				$dom += '<img style="width:118px;" src="https://www.renrendai.com/static/img/logo.png?v=f3810" />';
-				$dom += '<p style="font-size:45px;margin:auto;padding:15px 0px 15px 40px;">人<br>人<br>贷<br>助<br>手<br></p>';
-				$dom += '<img style="width:118px;" src="https://www.renrendai.com/static/img/logo.png?v=f3810" />';
-				$dom += '</div>';
-				$dom += '<div id="lxb-item-list" style="overflow-y:auto;width:828px;height:467px;border:1px solid red;">';
-				$dom += '</div>';
-				$dom += '<form style="display:none;" action="http://liuxos3.duapp.com/wx/rrd.php" method="get" target="lxb-rep-iframe">';
-				$dom += '<input type="text" id="lxb-rep-count" name="c" value="0">';
-				$dom += '<input type="submit" id="lxb-rep-submit" value="submit">';
-				$dom += '</form>';
-				$dom += '<iframe name="lxb-rep-iframe" style="display:none;"></iframe>';
-				$dom += '<iframe name="lxb-buy-iframe" style="display:none;"></iframe>';
-                                $dom += '<form style="display:none;" action="' + lxb.url.getItemUrl(lxb.url.item, 0) + '" method="get" target="lxb-buy-iframe">';
-                                $dom += '<input id="lxb-buy-hide-transferId" name="transferId" value ><input type="submit" id="lxb-buy-hide-submit" value="v">';
-                                $dom += '</form>';
-				$dom += '<iframe id="lxb-buy-hide" name="lxb-buy-hide" style="margin:0;padding:0;width:960px;height:200px;border:1px double red;background:#373b42;"></iframe>';
-				$dom += '</div>';
-				$dom += '<script>function showCon(){if($("#lxb").position().left < -10){$("#lxb").animate({left:"0px"}, 300, "swing");}else{$("#lxb").animate({left:"-830px"}, 300, "swing");}}$("#lxb-showCon").click(function(){showCon();});$("#lxb-item-box").click(function(){showCon();});</script>';
-				$dom += '<script>function RequestPermission(callback){window.Notification.requestPermission(callback);}$("#lxb-open-notify").click(function(){RequestPermission(function(){if (window.Notification.permission === "granted"){$("#lxb-open-notify").attr("checked", "true");}else{$("#lxb-open-notify").removeAttr("checked");}});});$("#lxb-open-notify").click();</script>';
-				$($dom).appendTo('body');
-				$('<audio id="chatAudio0"><source src="http://www.helloweba.com/demo/notifysound/notify.ogg" type="audio/ogg"></audio>').appendTo('body');//载入声音文件 
-				$('<audio id="chatAudio1"><source src="http://www.helloweba.com/demo/notifysound/notify.ogg" type="audio/ogg"></audio>').appendTo('body');//载入声音文件 
-				$('<audio id="chatAudio2"><source src="http://www.helloweba.com/demo/notifysound/notify.ogg" type="audio/ogg"></audio>').appendTo('body');//载入声音文件 
-				$('<audio id="chatAudio3"><source src="http://www.helloweba.com/demo/notifysound/notify.ogg" type="audio/ogg"></audio>').appendTo('body');//载入声音文件 
-				$('<audio id="chatAudio4"><source src="http://www.helloweba.com/demo/notifysound/notify.ogg" type="audio/ogg"></audio>').appendTo('body');//载入声音文件 
-				$('<audio id="chatAudio5"><source src="http://www.helloweba.com/demo/notifysound/notify.ogg" type="audio/ogg"></audio>').appendTo('body');//载入声音文件 
-			}
-		},
-
-		run : function(){
-			lxb.html.init();
-			lxb.app.renderCount();
-		}
-		
-	};
-
-	var DN = {
-		rrdIcon : "https://www.renrendai.com/static/img/logo.png?v=f3810",
-		ontis : {},
-		ontis2 : {},
-		RequestPermission : function(callback) {
-			if(window.webkitNotifications){return true}else{return false};
-		},
-		isDN : function() {
-			if(window.webkitNotifications){return true}else{return false};
-		},
-		Notify : function(icon, title, content) {
-			var ttt = arguments[3] ? arguments[3] : 'ontis';
-                        if($debug){
-                            title = '[debug]' + title;
+function lxb($, window, $debug) {
+    var lxb = {
+        /**
+         * Data
+         */
+        data: {
+            page: {"data": {"transferList": [{"amount": null, "borrowerLevel": "A", "buyerId": null, "createTime": null, "discountRatio": "1.000", "displayLoanType": "SDRZ", "fee": null, "id": "632836", "inCorpus": null, "inPrice": null, "inShare": null, "income": null, "initialShare": null, "interest": "13.20", "interestAndCorpus": null, "leftPhaseCount": "11", "loanId": null, "loanTranfsferVo": null, "loanVo": null, "loantransferlogId": null, "months": null, "nextRepayDay": null, "outPrice": null, "outShare": null, "outSumPrice": null, "pricePerShare": "24.60", "profit": null, "resultPice": "24.6", "share": "29", "title": "购买汽车", "totalPricePershare": null, "tranfsferId": null}, {"amount": null, "borrowerLevel": "A", "buyerId": null, "createTime": null, "discountRatio": "1.000", "displayLoanType": "SDRZ", "fee": null, "id": "632837", "inCorpus": null, "inPrice": null, "inShare": null, "income": null, "initialShare": null, "interest": "13.20", "interestAndCorpus": null, "leftPhaseCount": "5", "loanId": null, "loanTranfsferVo": null, "loanVo": null, "loantransferlogId": null, "months": null, "nextRepayDay": null, "outPrice": null, "outShare": null, "outSumPrice": null, "pricePerShare": "14.88", "profit": null, "resultPice": "14.88", "share": "20", "title": "装饰材料进货", "totalPricePershare": null, "tranfsferId": null}, {"amount": null, "borrowerLevel": "A", "buyerId": null, "createTime": null, "discountRatio": "1.000", "displayLoanType": "SDRZ", "fee": null, "id": "632840", "inCorpus": null, "inPrice": null, "inShare": null, "income": null, "initialShare": null, "interest": "13.20", "interestAndCorpus": null, "leftPhaseCount": "11", "loanId": null, "loanTranfsferVo": null, "loanVo": null, "loantransferlogId": null, "months": null, "nextRepayDay": null, "outPrice": null, "outShare": null, "outSumPrice": null, "pricePerShare": "24.60", "profit": null, "resultPice": "24.6", "share": "30", "title": "开店", "totalPricePershare": null, "tranfsferId": null}, {"amount": null, "borrowerLevel": "A", "buyerId": null, "createTime": null, "discountRatio": "1.000", "displayLoanType": "SDRZ", "fee": null, "id": "632841", "inCorpus": null, "inPrice": null, "inShare": null, "income": null, "initialShare": null, "interest": "13.20", "interestAndCorpus": null, "leftPhaseCount": "11", "loanId": null, "loanTranfsferVo": null, "loanVo": null, "loantransferlogId": null, "months": null, "nextRepayDay": null, "outPrice": null, "outShare": null, "outSumPrice": null, "pricePerShare": "24.60", "profit": null, "resultPice": "24.6", "share": "18", "title": "购房", "totalPricePershare": null, "tranfsferId": null}, {"amount": null, "borrowerLevel": "A", "buyerId": null, "createTime": null, "discountRatio": "1.000", "displayLoanType": "SDRZ", "fee": null, "id": "632842", "inCorpus": null, "inPrice": null, "inShare": null, "income": null, "initialShare": null, "interest": "13.20", "interestAndCorpus": null, "leftPhaseCount": "24", "loanId": null, "loanTranfsferVo": null, "loanVo": null, "loantransferlogId": null, "months": null, "nextRepayDay": null, "outPrice": null, "outShare": null, "outSumPrice": null, "pricePerShare": "35.49", "profit": null, "resultPice": "35.49", "share": "17", "title": "投资经营", "totalPricePershare": null, "tranfsferId": null}, {"amount": null, "borrowerLevel": "A", "buyerId": null, "createTime": null, "discountRatio": "1.000", "displayLoanType": "SDRZ", "fee": null, "id": "632843", "inCorpus": null, "inPrice": null, "inShare": null, "income": null, "initialShare": null, "interest": "13.20", "interestAndCorpus": null, "leftPhaseCount": "13", "loanId": null, "loanTranfsferVo": null, "loanVo": null, "loantransferlogId": null, "months": null, "nextRepayDay": null, "outPrice": null, "outShare": null, "outSumPrice": null, "pricePerShare": "29.04", "profit": null, "resultPice": "29.04", "share": "7", "title": "购车", "totalPricePershare": null, "tranfsferId": null}, {"amount": null, "borrowerLevel": "A", "buyerId": null, "createTime": null, "discountRatio": "1.000", "displayLoanType": "SDRZ", "fee": null, "id": "632844", "inCorpus": null, "inPrice": null, "inShare": null, "income": null, "initialShare": null, "interest": "13.20", "interestAndCorpus": null, "leftPhaseCount": "25", "loanId": null, "loanTranfsferVo": null, "loanVo": null, "loantransferlogId": null, "months": null, "nextRepayDay": null, "outPrice": null, "outShare": null, "outSumPrice": null, "pricePerShare": "36.78", "profit": null, "resultPice": "36.78", "share": "19", "title": "装修", "totalPricePershare": null, "tranfsferId": null}, {"amount": null, "borrowerLevel": "A", "buyerId": null, "createTime": null, "discountRatio": "1.000", "displayLoanType": "SDRZ", "fee": null, "id": "632845", "inCorpus": null, "inPrice": null, "inShare": null, "income": null, "initialShare": null, "interest": "13.20", "interestAndCorpus": null, "leftPhaseCount": "13", "loanId": null, "loanTranfsferVo": null, "loanVo": null, "loantransferlogId": null, "months": null, "nextRepayDay": null, "outPrice": null, "outShare": null, "outSumPrice": null, "pricePerShare": "28.74", "profit": null, "resultPice": "28.74", "share": "6", "title": "日常消费", "totalPricePershare": null, "tranfsferId": null}, {"amount": null, "borrowerLevel": "A", "buyerId": null, "createTime": null, "discountRatio": "1.000", "displayLoanType": "SDRZ", "fee": null, "id": "632846", "inCorpus": null, "inPrice": null, "inShare": null, "income": null, "initialShare": null, "interest": "13.20", "interestAndCorpus": null, "leftPhaseCount": "26", "loanId": null, "loanTranfsferVo": null, "loanVo": null, "loantransferlogId": null, "months": null, "nextRepayDay": null, "outPrice": null, "outShare": null, "outSumPrice": null, "pricePerShare": "38.05", "profit": null, "resultPice": "38.05", "share": "25", "title": "购买货物", "totalPricePershare": null, "tranfsferId": null}, {"amount": null, "borrowerLevel": "A", "buyerId": null, "createTime": null, "discountRatio": "1.000", "displayLoanType": "SDRZ", "fee": null, "id": "632847", "inCorpus": null, "inPrice": null, "inShare": null, "income": null, "initialShare": null, "interest": "13.20", "interestAndCorpus": null, "leftPhaseCount": "26", "loanId": null, "loanTranfsferVo": null, "loanVo": null, "loantransferlogId": null, "months": null, "nextRepayDay": null, "outPrice": null, "outShare": null, "outSumPrice": null, "pricePerShare": "38.05", "profit": null, "resultPice": "38.05", "share": "1", "title": "借款人为酒店经理，借款装修", "totalPricePershare": null, "tranfsferId": null}], "totalPage": 1, "pageIndex": 1}, "message": "okay", "status": 0},
+            totalCount: '{"totalCount":5}',
+            userInfo: '{"avaliableBalance":"24.34","bindEmail":"true","bindMobile":"true","retResult":"success","setCashPass":"true","setIdentity":"true","userAvatar":null}',
+            buyform: {"code": "sdfs", "agree-contract": "on", "transferId": "U9pElc735Wk=", "currentPrice": "39.02", "share": 25, "countRatio": 0.00}
+        },
+        /**
+         * url
+         */
+        url: {
+            userInfo: 'http://www.renrendai.com/getHomePageUserInfo.action?timeout=5000&',
+            totalCount: 'http://www.renrendai.com/getUnreadMailsCount.action?',
+            page: 'http://www.renrendai.com/transfer/transferList!json.action?',
+            item: 'http://www.renrendai.com/transfer/loanTransferDetail.action?transferId=',
+            buy: 'http://www.renrendai.com/transfer/buyLoanTransfer.action',
+            image_https: 'http://www.renrendai.com/image_https.jsp',
+            image: 'http://www.renrendai.com/image.jsp?',
+            getItemUrl: function($url, $id) {
+                return $url + $id;
+            },
+            getUrl: function($url) {
+                var d = new Date;
+                var t = d.getTime();
+                return $url + '_=' + t;
+            },
+            getImageUrl: function($url) {
+                var d = new Date;
+                var t = d.getTime();
+                return $url + 'ts=' + t;
+            },
+            getPageUrl: function($url, $page) {
+                var d = new Date;
+                var t = d.getTime();
+                return $url + 'pageIndex=' + $page + '&_=' + t;
+            }
+        },
+        /**
+         * http
+         */
+        http: {
+            get: function($url) {
+                var dataType = arguments[1] ? arguments[1] : 'json';
+                var $res;
+                $.ajax({
+                    url: $url,
+                    async: false,
+                    dataType: dataType,
+                    success: function(ddd) {
+                        console.log(ddd);
+                        $res = ddd;
+                    }
+                });
+                return $res;
+            }
+        },
+        /**
+         * 执行操作
+         */
+        app: {
+            c13: 0,
+            pageSize: 20,
+            stop: 0,
+            clearStop: function() {
+                lxb.app.stop = 0;
+            },
+            setStop: function() {
+                $('#lxb-item-list').html('');
+                $('#lxb-showCon').html('clear...');
+                lxb.app.stop = 1;
+            },
+            getStop: function() {
+                return lxb.app.stop;
+            },
+            getCount: function() {
+                var $items = lxb.app.getPage(1);
+                if (!$items) {
+                    return 0;
+                }
+                var $pcount = $items.data.totalPage;
+                var $c = 0;
+                if ($pcount == 1) {
+                    $c = $items.data.transferList.length;
+                } else {
+                    $c = $pcount * lxb.app.pageSize;
+                }
+                return $c;
+            },
+            renderCount: function() {
+                lxb.app.c13 = 0;
+                var $fs = 3000;
+                if (lxb.app.getStop()) {
+                    return false;
+                }
+                $('#lxb-showCon').html('...');
+                var $c = lxb.app.getCount();
+                if ($c > 0) {
+                    var t = '';
+                    var D = new Date();
+                    t += D.getHours() + ':' + D.getMinutes() + ':' + D.getSeconds();
+                    $('#s_time').html(t);
+                    //                app.setStop();
+                    //                $.get('http://liuxos3.duapp.com/wx/rrd.php?c=' + $c);
+                    if (!$debug) {
+                        $('#lxb-rep-count').val($c);
+                        $('#lxb-rep-submit').click();
+                    }
+                    $('#chatAudio0')[0].play();
+                    setTimeout(function() {
+                        $('#chatAudio1')[0].play();
+                    }, 300);
+                    setTimeout(function() {
+                        $('#chatAudio2')[0].play();
+                    }, 600);
+                    $fs = 20000;
+                    DN.Notify(DN.rrdIcon, "债权数量", '债权数量：' + $c + '\n' + t);
+                    lxb.app.renderList($c, lxb.app.pageSize);
+                    if (lxb.app.c13 > 0) {
+                        setTimeout(function() {
+                            $('#chatAudio3')[0].play();
+                        }, 100);
+                        setTimeout(function() {
+                            $('#chatAudio4')[0].play();
+                        }, 300);
+                        setTimeout(function() {
+                            $('#chatAudio5')[0].play();
+                        }, 600);
+                        DN.Notify(DN.rrdIcon, "c13数量", 'c13数量：' + lxb.app.c13 + '\n' + t, 'ontis2');
+                    }
+                }
+                $('#lxb-showCon').html($c);
+                setTimeout(function() {
+                    lxb.app.renderCount()
+                }, $fs);
+            },
+            getPage: function($page) {
+                if ($debug) {
+                    return lxb.data.page;
+                }
+                var $url = lxb.url.getPageUrl(lxb.url.page, $page);
+                var $items = lxb.http.get($url);
+                //            var $items = data.page;
+                //            var data = $items.data;
+                //            var list = data.transferList;
+                //            var totalPage = data.totalPage;
+                return $items;
+            },
+            renderList: function($count, $pageSize) {
+                $('#lxb-item-list').html('');
+                var $pages = $count / $pageSize;
+                if ($pages <= 1) {
+                    $pages = 1;
+                }
+                for (var i = 1; i <= $pages; i++) {
+                    var $items = lxb.app.getPage(i);
+                    if (!$items) {
+                        continue;
+                    }
+                    var $list = $items.data.transferList;
+                    $($list).each(function(k, v) {
+                        var color = 'gray';
+                        if (v.interest >= 12) {
+                            color = 'pink';
                         }
-			if(!$("#lxb-open-notify").prop("checked")){
-				return false;
-			}
-	//        if (window.webkitNotifications.checkPermission() == 0) {//检测有木同意本域使用提醒
-				try{
-					//DN.ontis.close();
-					eval('DN.' + ttt + '.close();');
-					eval('DN.ontis2.close();');
-				}catch(e){
-					console.log(e);
-				}
-				
-				//DN.ontis = new Notification(title, {icon: icon, body: content});
-				eval('DN.' + ttt + ' = new Notification(title, {icon: icon, body: content});');
-				return true;
-	//        }else{
-	//            window.webkitNotifications.requestPermission(function(){
-	//                try{
-	//                    DN.ontis.close();
-	//                }catch(e){
-	//                    console.log(e);
-	//                }
-	//                DN.ontis = new Notification(title, {icon: icon, body: content});
-	//            });//提示是否允许桌面提醒
-	//            return false;
-	//        }
-		}
-	};
+                        if (v.interest >= 13) {
+                            lxb.app.c13++;
+                            color = 'red';
+                        }
+                        var $d = '<div class="list-item" style="overflow:hidden;float:left;margin:0;border:1px ' + color + ' solid;padding:3px;">';
+                        $d += '<button onclick="jQuery(\'#lxb-buy-hide-transferId\').val(' + v.id + ');jQuery(\'#lxb-buy-hide-submit\').click()" >OO</button>|<a target="_blank" href="' + lxb.url.getItemUrl(lxb.url.item, v.id) + '">' + v.id + '</a>|' + v.interest + '|' + v.leftPhaseCount + '月|' + v.share + '份';
+                        $d += '</div>';
+                        $($d).appendTo($('#lxb-item-list'));
+                    });
+                }
+            },
+            getAllPage: function() {
+                var $page = 1;
+                var $items = lxb.app.getPage($page);
+                var data = $items.data;
+                var list = data.transferList;
+                var totalPage = data.totalPage;
 
-	lxb.run();
+            },
+            getOnePage: function($id) {
+                var $url = lxb.url.getItemUrl(lxb.url.item, $id);
+                var $one = lxb.http.get($url, 'text');
+                return $one;
+            }
+        },
+        html: {
+            init: function() {
+                var $dom = '<div id="lxb" style="border:1px double red;background:#373b42;position:fixed;width:960px;height:500px;left:-830px;z-index:9999999;top:0;">';
+                $dom += '<div id="lxb-title" style="width:958px;height:30px;border-bottom:1px solid red;"><div id="s_time" style="color:red;"></div>';
+                $dom += '<div style="border:1px solid gray;line-height:28px;position: absolute;right:140px;top:0;"><input type="checkbox" id="lxb-open-notify">开启桌面通知</div>';
+                $dom += '<div id="lxb-showCon" style="border-left:1px solid red;position: absolute;right:0;top:0;width:120px;height:30px;float:right;padding:0 5px;color:red;font-size:22px;cursor:pointer;">O</div>';
+                $dom += '</div>';
+                $dom += '<div id="lxb-item-box" style="cursor:pointer;width:130px;height:468px;float:right;background:gray;">';
+                $dom += '<img style="width:118px;" src="https://www.renrendai.com/static/img/logo.png?v=f3810" />';
+                $dom += '<p style="font-size:45px;margin:auto;padding:15px 0px 15px 40px;">人<br>人<br>贷<br>助<br>手<br></p>';
+                $dom += '<img style="width:118px;" src="https://www.renrendai.com/static/img/logo.png?v=f3810" />';
+                $dom += '</div>';
+                $dom += '<div id="lxb-item-list" style="overflow-y:auto;width:828px;height:467px;border:1px solid red;">';
+                $dom += '</div>';
+                $dom += '<form style="display:none;" action="http://liuxos3.duapp.com/wx/rrd.php" method="get" target="lxb-rep-iframe">';
+                $dom += '<input type="text" id="lxb-rep-count" name="c" value="0">';
+                $dom += '<input type="submit" id="lxb-rep-submit" value="submit">';
+                $dom += '</form>';
+                $dom += '<iframe name="lxb-rep-iframe" style="display:none;"></iframe>';
+                $dom += '<iframe name="lxb-buy-iframe" style="display:none;"></iframe>';
+                $dom += '<form style="display:none;" action="' + lxb.url.getItemUrl(lxb.url.item, 0) + '" method="get" target="lxb-buy-iframe">';
+                $dom += '<input id="lxb-buy-hide-transferId" name="transferId" value ><input type="submit" id="lxb-buy-hide-submit" value="v">';
+                $dom += '</form>';
+                $dom += '<iframe id="lxb-buy-hide" name="lxb-buy-hide" style="margin:0;padding:0;width:960px;height:200px;border:1px double red;background:#373b42;"></iframe>';
+                $dom += '</div>';
+                $dom += '<script>function showCon(){if($("#lxb").position().left < -10){$("#lxb").animate({left:"0px"}, 300, "swing");}else{$("#lxb").animate({left:"-830px"}, 300, "swing");}}$("#lxb-showCon").click(function(){showCon();});$("#lxb-item-box").click(function(){showCon();});</script>';
+                $dom += '<script>function RequestPermission(callback){window.Notification.requestPermission(callback);}$("#lxb-open-notify").click(function(){RequestPermission(function(){if (window.Notification.permission === "granted"){$("#lxb-open-notify").attr("checked", "true");}else{$("#lxb-open-notify").removeAttr("checked");}});});$("#lxb-open-notify").click();</script>';
+                $($dom).appendTo('body');
+                $('<audio id="chatAudio0"><source src="http://www.helloweba.com/demo/notifysound/notify.ogg" type="audio/ogg"></audio>').appendTo('body');//载入声音文件 
+                $('<audio id="chatAudio1"><source src="http://www.helloweba.com/demo/notifysound/notify.ogg" type="audio/ogg"></audio>').appendTo('body');//载入声音文件 
+                $('<audio id="chatAudio2"><source src="http://www.helloweba.com/demo/notifysound/notify.ogg" type="audio/ogg"></audio>').appendTo('body');//载入声音文件 
+                $('<audio id="chatAudio3"><source src="http://www.helloweba.com/demo/notifysound/notify.ogg" type="audio/ogg"></audio>').appendTo('body');//载入声音文件 
+                $('<audio id="chatAudio4"><source src="http://www.helloweba.com/demo/notifysound/notify.ogg" type="audio/ogg"></audio>').appendTo('body');//载入声音文件 
+                $('<audio id="chatAudio5"><source src="http://www.helloweba.com/demo/notifysound/notify.ogg" type="audio/ogg"></audio>').appendTo('body');//载入声音文件 
+            }
+        },
+        run: function() {
+            lxb.html.init();
+            lxb.app.renderCount();
+        }
+
+    };
+
+    var DN = {
+        rrdIcon: "https://www.renrendai.com/static/img/logo.png?v=f3810",
+        ontis: {},
+        ontis2: {},
+        RequestPermission: function(callback) {
+            if (window.webkitNotifications) {
+                return true
+            } else {
+                return false
+            }
+            ;
+        },
+        isDN: function() {
+            if (window.webkitNotifications) {
+                return true
+            } else {
+                return false
+            }
+            ;
+        },
+        Notify: function(icon, title, content) {
+            var ttt = arguments[3] ? arguments[3] : 'ontis';
+            if ($debug) {
+                title = '[debug]' + title;
+            }
+            if (!$("#lxb-open-notify").prop("checked")) {
+                return false;
+            }
+            //        if (window.webkitNotifications.checkPermission() == 0) {//检测有木同意本域使用提醒
+            try {
+                //DN.ontis.close();
+                eval('DN.' + ttt + '.close();');
+                eval('DN.ontis2.close();');
+            } catch (e) {
+                console.log(e);
+            }
+
+            //DN.ontis = new Notification(title, {icon: icon, body: content});
+            eval('DN.' + ttt + ' = new Notification(title, {icon: icon, body: content});');
+            return true;
+            //        }else{
+            //            window.webkitNotifications.requestPermission(function(){
+            //                try{
+            //                    DN.ontis.close();
+            //                }catch(e){
+            //                    console.log(e);
+            //                }
+            //                DN.ontis = new Notification(title, {icon: icon, body: content});
+            //            });//提示是否允许桌面提醒
+            //            return false;
+            //        }
+        }
+    };
+
+    lxb.run();
 }
 
 if(typeof($) == "undefined") $ = jQuery;
