@@ -203,7 +203,9 @@ function lxb($, window, $debug) {
                         }
                         if(v.id == $('#lxb-buy-hide-id').val()){
                             $('#lxb-buy-hide-id-count').html(v.share);
-                            $('input[name="share"]').val(round(v.share*2/3));
+                            if(parseInt(v.share*2/3) < $('input[name="share"]').val()){
+                                $('input[name="share"]').val(parseInt(v.share*2/3));
+                            }
                         }
                         var $d = '<div class="list-item" style="overflow:hidden;float:left;margin:0;border:1px ' + color + ' solid;padding:3px;">';
                         $d += '<button onclick="aaa(' + v.id + ')" >OO</button>|<a target="_blank" href="' + lxb.url.getItemUrl(lxb.url.item, v.id) + '">' + v.id + '</a>|' + v.interest + '|' + v.leftPhaseCount + '月|' + v.share + '份';
@@ -230,7 +232,7 @@ function lxb($, window, $debug) {
             init: function() {
                 var $dom = '<div id="lxb" style="border:1px double red;background:#373b42;position:fixed;width:960px;height:500px;left:-830px;z-index:9999999;top:0;">';
                 $dom += '<div id="lxb-title" style="width:958px;height:30px;border-bottom:1px solid red;"><div id="s_time" style="color:red;"></div>';
-                $dom += '<div style="margin-left:40%;"><a href="http://liuxos3.duapp.com/wx/chart" target="_blank">债权交易走势图</a></div>';
+                $dom += '<div style="margin-left:40%;position: absolute;top:1px;"><a href="http://liuxos3.duapp.com/wx/chart" target="_blank">债权交易走势图</a></div>';
                 $dom += '<div style="border:1px solid gray;line-height:28px;position: absolute;right:140px;top:0;"><input type="checkbox" id="lxb-open-notify">开启桌面通知</div>';
                 $dom += '<div id="lxb-showCon" style="border-left:1px solid red;position: absolute;right:0;top:0;width:120px;height:30px;float:right;padding:0 5px;color:red;font-size:22px;cursor:pointer;">O</div>';
                 $dom += '</div>';
