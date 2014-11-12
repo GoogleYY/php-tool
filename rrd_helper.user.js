@@ -11,7 +11,7 @@
 // @require		http://www.renrendai.com/static/js/lib/jquery/1.9.1/jquery.js
 // @icon		http://www.renrendai.com/favicon.ico
 // @run-at		document-idle
-// @version 		1005
+// @version 		1008
 // @updateURL		https://raw.githubusercontent.com/wedv/php-tool/master/rrd_helper.user.js
 // @supportURL		https://github.com/wedv/php-tool
 // @homepage		https://github.com/wedv/php-tool
@@ -201,6 +201,10 @@ function lxb($, window, $debug) {
                             lxb.app.c13++;
                             color = 'red';
                         }
+                        if(v.id == $('#lxb-buy-hide-id').val()){
+                            $('#lxb-buy-hide-id-count').html(v.share);
+                            $('input[name="share"]').val(round(v.share*2/3));
+                        }
                         var $d = '<div class="list-item" style="overflow:hidden;float:left;margin:0;border:1px ' + color + ' solid;padding:3px;">';
                         $d += '<button onclick="aaa(' + v.id + ')" >OO</button>|<a target="_blank" href="' + lxb.url.getItemUrl(lxb.url.item, v.id) + '">' + v.id + '</a>|' + v.interest + '|' + v.leftPhaseCount + '月|' + v.share + '份';
                         $d += '</div>';
@@ -242,6 +246,7 @@ function lxb($, window, $debug) {
                 $dom += '</form>';
                 $dom += '<iframe name="lxb-rep-iframe" style="display:none;"></iframe>';
                 $dom += '<div id="lxb-buy-iframe" name="lxb-buy-iframe" style="display:none;"></div>';
+                $dom += '<input type="hidden" id="lxb-buy-hide-id" value="0">';
                 $dom += '<div id="lxb-buy-hide" name="lxb-buy-hide" style="margin:0;padding:0;width:960px;height:200px;border:1px double red;background:#373b42;"></div>';
                 $dom += '</div>';
                 $dom += '<script>function showCon(){if($("#lxb").position().left < -10){$("#lxb").animate({left:"0px"}, 300, "swing");}else{$("#lxb").animate({left:"-830px"}, 300, "swing");}}$("#lxb-showCon").click(function(){showCon();});$("#lxb-item-box").click(function(){showCon();});</script>';
