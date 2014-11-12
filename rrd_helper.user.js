@@ -11,7 +11,7 @@
 // @require		http://www.renrendai.com/static/js/lib/jquery/1.9.1/jquery.js
 // @icon		http://www.renrendai.com/favicon.ico
 // @run-at		document-idle
-// @version 		1004
+// @version 		1005
 // @updateURL		https://raw.githubusercontent.com/wedv/php-tool/master/rrd_helper.user.js
 // @supportURL		https://github.com/wedv/php-tool
 // @homepage		https://github.com/wedv/php-tool
@@ -147,7 +147,7 @@ function lxb($, window, $debug) {
                     setTimeout(function() {
                         $('#chatAudio2')[0].play();
                     }, 600);
-                    $fs = 20000;
+//                    $fs = 20000;
                     DN.Notify(DN.rrdIcon, "债权数量", '债权数量：' + $c + '\n' + t);
                     lxb.app.renderList($c, lxb.app.pageSize);
                     if (lxb.app.c13 > 0) {
