@@ -266,6 +266,8 @@ function lxb($, window, $debug) {
         rrdIcon: "https://www.renrendai.com/static/img/logo.png?v=f3810",
         ontis: {},
         ontis2: {},
+        confirmTime: 0,
+        keepTime: 30000,
         RequestPermission: function(callback) {
             if (window.webkitNotifications) {
                 return true
@@ -283,6 +285,9 @@ function lxb($, window, $debug) {
             ;
         },
         Notify: function(icon, title, content) {
+            var d = new Date();
+            var t = d.getTime();
+            DN.confirmTime = t;
             var ttt = arguments[3] ? arguments[3] : 'ontis';
             if ($debug) {
                 title = '[debug]' + title;
@@ -301,6 +306,20 @@ function lxb($, window, $debug) {
 
             //DN.ontis = new Notification(title, {icon: icon, body: content});
             eval('DN.' + ttt + ' = new Notification(title, {icon: icon, body: content});');
+            setTimeout(function(){
+                var d = new Date();
+                var t = d.getTime();
+                if(t - DN.confirmTime < DN.keepTime){
+                    return false;
+                }
+                try {
+                    //DN.ontis.close();
+                    eval('DN.ontis.close();');
+                    eval('DN.ontis2.close();');
+                } catch (e) {
+                    console.log(e);
+                }
+            }, DN.keepTime);
             return true;
             //        }else{
             //            window.webkitNotifications.requestPermission(function(){
