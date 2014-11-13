@@ -11,7 +11,7 @@
 // @require		http://www.renrendai.com/static/js/lib/jquery/1.9.1/jquery.js
 // @icon		http://www.renrendai.com/favicon.ico
 // @run-at		document-idle
-// @version 		1010
+// @version 		1011
 // @updateURL		https://raw.githubusercontent.com/wedv/php-tool/master/rrd_helper.user.js
 // @supportURL		https://github.com/wedv/php-tool
 // @homepage		https://github.com/wedv/php-tool
@@ -275,9 +275,9 @@ function lxb($, window, $debug) {
                 $dom += '<div id="lxb-buy-iframe" name="lxb-buy-iframe" style="display:none;"></div>';
                 $dom += '<input type="hidden" id="lxb-buy-hide-id" value="0">';
                 $dom += '<input type="hidden" id="lxb-get-user" onchange="renderUserInfo()" value="0">';
-                $dom += '<div id="lxb-buy-hide" name="lxb-buy-hide" style="margin:-1px;padding:0;width:960px;height:200px;border:1px double red;background:#373b42;"></div>';
+                $dom += '<div id="lxb-buy-hide" name="lxb-buy-hide" style="display:none;margin:-1px;padding:0;width:960px;height:200px;border:1px double red;background:#373b42;"></div>';
                 $dom += '</div>';
-                $dom += '<script>function showCon(){if($("#lxb").position().left < -10){$("#lxb").animate({left:"0px"}, 300, "swing");}else{$("#lxb").animate({left:"-830px"}, 300, "swing");}}$("#lxb-showCon").click(function(){showCon();});$("#lxb-item-box").click(function(){showCon();});</script>';
+                $dom += '<script>function showCon(){if($("#lxb").position().left < -10){$("#lxb").animate({left:"0px"}, 300, "swing", function(){$("#lxb-buy-hide").slideDown(300);});}else{$("#lxb-buy-hide").slideUp(300, function(){$("#lxb").animate({left:"-830px"}, 300, "swing");});}}$("#lxb-showCon").click(function(){showCon();});$("#lxb-item-box").click(function(){showCon();});</script>';
                 $dom += '<script>function RequestPermission(callback){window.Notification.requestPermission(callback);}$("#lxb-open-notify").click(function(){RequestPermission(function(){if (window.Notification.permission === "granted"){$("#lxb-open-notify").attr("checked", "true");}else{$("#lxb-open-notify").removeAttr("checked");}});});$("#lxb-open-notify").click();</script>';
                 $($dom).appendTo('body');
                 $('<audio id="chatAudio0"><source src="http://www.helloweba.com/demo/notifysound/notify.ogg" type="audio/ogg"></audio>').appendTo('body');//载入声音文件 
