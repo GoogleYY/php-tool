@@ -6,12 +6,12 @@
 // @developer		we
 // @contributor		
 // @description	人人贷助手系统 For Firefox&Chrome :-)
-// @include		http://www.renrendai.com/transfer/transferList.action
-// @match		http://www.renrendai.com/transfer/transferList.action
+// @include		http://www.renrendai.com/*
+// @match		http://www.renrendai.com/*
 // @require		http://www.renrendai.com/static/js/lib/jquery/1.9.1/jquery.js
 // @icon		http://www.renrendai.com/favicon.ico
 // @run-at		document-idle
-// @version 		1008
+// @version 		1009
 // @updateURL		https://raw.githubusercontent.com/wedv/php-tool/master/rrd_helper.user.js
 // @supportURL		https://github.com/wedv/php-tool
 // @homepage		https://github.com/wedv/php-tool
@@ -36,8 +36,8 @@ function lxb($, window, $debug) {
          */
         data: {
             page: {"data": {"transferList": [{"amount": null, "borrowerLevel": "A", "buyerId": null, "createTime": null, "discountRatio": "1.000", "displayLoanType": "SDRZ", "fee": null, "id": "632836", "inCorpus": null, "inPrice": null, "inShare": null, "income": null, "initialShare": null, "interest": "13.20", "interestAndCorpus": null, "leftPhaseCount": "11", "loanId": null, "loanTranfsferVo": null, "loanVo": null, "loantransferlogId": null, "months": null, "nextRepayDay": null, "outPrice": null, "outShare": null, "outSumPrice": null, "pricePerShare": "24.60", "profit": null, "resultPice": "24.6", "share": "29", "title": "购买汽车", "totalPricePershare": null, "tranfsferId": null}, {"amount": null, "borrowerLevel": "A", "buyerId": null, "createTime": null, "discountRatio": "1.000", "displayLoanType": "SDRZ", "fee": null, "id": "632837", "inCorpus": null, "inPrice": null, "inShare": null, "income": null, "initialShare": null, "interest": "13.20", "interestAndCorpus": null, "leftPhaseCount": "5", "loanId": null, "loanTranfsferVo": null, "loanVo": null, "loantransferlogId": null, "months": null, "nextRepayDay": null, "outPrice": null, "outShare": null, "outSumPrice": null, "pricePerShare": "14.88", "profit": null, "resultPice": "14.88", "share": "20", "title": "装饰材料进货", "totalPricePershare": null, "tranfsferId": null}, {"amount": null, "borrowerLevel": "A", "buyerId": null, "createTime": null, "discountRatio": "1.000", "displayLoanType": "SDRZ", "fee": null, "id": "632840", "inCorpus": null, "inPrice": null, "inShare": null, "income": null, "initialShare": null, "interest": "13.20", "interestAndCorpus": null, "leftPhaseCount": "11", "loanId": null, "loanTranfsferVo": null, "loanVo": null, "loantransferlogId": null, "months": null, "nextRepayDay": null, "outPrice": null, "outShare": null, "outSumPrice": null, "pricePerShare": "24.60", "profit": null, "resultPice": "24.6", "share": "30", "title": "开店", "totalPricePershare": null, "tranfsferId": null}, {"amount": null, "borrowerLevel": "A", "buyerId": null, "createTime": null, "discountRatio": "1.000", "displayLoanType": "SDRZ", "fee": null, "id": "632841", "inCorpus": null, "inPrice": null, "inShare": null, "income": null, "initialShare": null, "interest": "13.20", "interestAndCorpus": null, "leftPhaseCount": "11", "loanId": null, "loanTranfsferVo": null, "loanVo": null, "loantransferlogId": null, "months": null, "nextRepayDay": null, "outPrice": null, "outShare": null, "outSumPrice": null, "pricePerShare": "24.60", "profit": null, "resultPice": "24.6", "share": "18", "title": "购房", "totalPricePershare": null, "tranfsferId": null}, {"amount": null, "borrowerLevel": "A", "buyerId": null, "createTime": null, "discountRatio": "1.000", "displayLoanType": "SDRZ", "fee": null, "id": "632842", "inCorpus": null, "inPrice": null, "inShare": null, "income": null, "initialShare": null, "interest": "13.20", "interestAndCorpus": null, "leftPhaseCount": "24", "loanId": null, "loanTranfsferVo": null, "loanVo": null, "loantransferlogId": null, "months": null, "nextRepayDay": null, "outPrice": null, "outShare": null, "outSumPrice": null, "pricePerShare": "35.49", "profit": null, "resultPice": "35.49", "share": "17", "title": "投资经营", "totalPricePershare": null, "tranfsferId": null}, {"amount": null, "borrowerLevel": "A", "buyerId": null, "createTime": null, "discountRatio": "1.000", "displayLoanType": "SDRZ", "fee": null, "id": "632843", "inCorpus": null, "inPrice": null, "inShare": null, "income": null, "initialShare": null, "interest": "13.20", "interestAndCorpus": null, "leftPhaseCount": "13", "loanId": null, "loanTranfsferVo": null, "loanVo": null, "loantransferlogId": null, "months": null, "nextRepayDay": null, "outPrice": null, "outShare": null, "outSumPrice": null, "pricePerShare": "29.04", "profit": null, "resultPice": "29.04", "share": "7", "title": "购车", "totalPricePershare": null, "tranfsferId": null}, {"amount": null, "borrowerLevel": "A", "buyerId": null, "createTime": null, "discountRatio": "1.000", "displayLoanType": "SDRZ", "fee": null, "id": "632844", "inCorpus": null, "inPrice": null, "inShare": null, "income": null, "initialShare": null, "interest": "13.20", "interestAndCorpus": null, "leftPhaseCount": "25", "loanId": null, "loanTranfsferVo": null, "loanVo": null, "loantransferlogId": null, "months": null, "nextRepayDay": null, "outPrice": null, "outShare": null, "outSumPrice": null, "pricePerShare": "36.78", "profit": null, "resultPice": "36.78", "share": "19", "title": "装修", "totalPricePershare": null, "tranfsferId": null}, {"amount": null, "borrowerLevel": "A", "buyerId": null, "createTime": null, "discountRatio": "1.000", "displayLoanType": "SDRZ", "fee": null, "id": "632845", "inCorpus": null, "inPrice": null, "inShare": null, "income": null, "initialShare": null, "interest": "13.20", "interestAndCorpus": null, "leftPhaseCount": "13", "loanId": null, "loanTranfsferVo": null, "loanVo": null, "loantransferlogId": null, "months": null, "nextRepayDay": null, "outPrice": null, "outShare": null, "outSumPrice": null, "pricePerShare": "28.74", "profit": null, "resultPice": "28.74", "share": "6", "title": "日常消费", "totalPricePershare": null, "tranfsferId": null}, {"amount": null, "borrowerLevel": "A", "buyerId": null, "createTime": null, "discountRatio": "1.000", "displayLoanType": "SDRZ", "fee": null, "id": "632846", "inCorpus": null, "inPrice": null, "inShare": null, "income": null, "initialShare": null, "interest": "13.20", "interestAndCorpus": null, "leftPhaseCount": "26", "loanId": null, "loanTranfsferVo": null, "loanVo": null, "loantransferlogId": null, "months": null, "nextRepayDay": null, "outPrice": null, "outShare": null, "outSumPrice": null, "pricePerShare": "38.05", "profit": null, "resultPice": "38.05", "share": "25", "title": "购买货物", "totalPricePershare": null, "tranfsferId": null}, {"amount": null, "borrowerLevel": "A", "buyerId": null, "createTime": null, "discountRatio": "1.000", "displayLoanType": "SDRZ", "fee": null, "id": "632847", "inCorpus": null, "inPrice": null, "inShare": null, "income": null, "initialShare": null, "interest": "13.20", "interestAndCorpus": null, "leftPhaseCount": "26", "loanId": null, "loanTranfsferVo": null, "loanVo": null, "loantransferlogId": null, "months": null, "nextRepayDay": null, "outPrice": null, "outShare": null, "outSumPrice": null, "pricePerShare": "38.05", "profit": null, "resultPice": "38.05", "share": "1", "title": "借款人为酒店经理，借款装修", "totalPricePershare": null, "tranfsferId": null}], "totalPage": 1, "pageIndex": 1}, "message": "okay", "status": 0},
-            totalCount: '{"totalCount":5}',
-            userInfo: '{"avaliableBalance":"24.34","bindEmail":"true","bindMobile":"true","retResult":"success","setCashPass":"true","setIdentity":"true","userAvatar":null}',
+            totalCount: {"totalCount":5},
+            userInfo: {"avaliableBalance":"2400.34","bindEmail":"true","bindMobile":"true","retResult":"success","setCashPass":"true","setIdentity":"true","userAvatar":null},
             buyform: {"code": "sdfs", "agree-contract": "on", "transferId": "U9pElc735Wk=", "currentPrice": "39.02", "share": 25, "countRatio": 0.00}
         },
         /**
@@ -165,8 +165,23 @@ function lxb($, window, $debug) {
                 }
                 $('#lxb-showCon').html($c);
                 setTimeout(function() {
-                    lxb.app.renderCount()
+                    lxb.app.renderCount();
                 }, $fs);
+            },
+            renderUserInfo: function() {
+                var one = arguments[0] ? arguments[0] : 0;
+                var $fs = 60000;
+                var $userInfo = lxb.app.getUserInfo();
+                var str = '--';
+                if($userInfo){
+                    str = $userInfo.avaliableBalance;
+                }
+                $('#lxb-user-money').html(str);
+                if(!one){
+                    setTimeout(function() {
+                        lxb.app.renderUserInfo();
+                    }, $fs);
+                }
             },
             getPage: function($page) {
                 if ($debug) {
@@ -179,6 +194,14 @@ function lxb($, window, $debug) {
                 //            var list = data.transferList;
                 //            var totalPage = data.totalPage;
                 return $items;
+            },
+            getUserInfo: function() {
+                if ($debug) {
+                    return lxb.data.userInfo;
+                }
+                var $url = lxb.url.getUrl(lxb.url.userInfo);
+                var $userInfo = lxb.http.get($url);
+                return $userInfo;
             },
             renderList: function($count, $pageSize) {
                 $('#lxb-item-list').html('');
@@ -233,6 +256,7 @@ function lxb($, window, $debug) {
                 var $dom = '<div id="lxb" style="border:1px double red;background:#373b42;position:fixed;width:960px;height:500px;left:-830px;z-index:9999999;top:0;">';
                 $dom += '<div id="lxb-title" style="width:958px;height:30px;border-bottom:1px solid red;"><div id="s_time" style="color:red;"></div>';
                 $dom += '<div style="margin-left:40%;position: absolute;top:1px;"><a href="http://liuxos3.duapp.com/wx/chart" target="_blank">债权交易走势图</a></div>';
+                $dom += '<div style="border:1px solid gray;line-height:28px;margin-left:60%;position: absolute;top:1px;"><p>账户余额：<span id="lxb-user-money">--</span></p></div>';
                 $dom += '<div style="border:1px solid gray;line-height:28px;position: absolute;right:140px;top:0;"><input type="checkbox" id="lxb-open-notify">开启桌面通知</div>';
                 $dom += '<div id="lxb-showCon" style="border-left:1px solid red;position: absolute;right:0;top:0;width:120px;height:30px;float:right;padding:0 5px;color:red;font-size:22px;cursor:pointer;">O</div>';
                 $dom += '</div>';
@@ -250,6 +274,7 @@ function lxb($, window, $debug) {
                 $dom += '<iframe name="lxb-rep-iframe" style="display:none;"></iframe>';
                 $dom += '<div id="lxb-buy-iframe" name="lxb-buy-iframe" style="display:none;"></div>';
                 $dom += '<input type="hidden" id="lxb-buy-hide-id" value="0">';
+                $dom += '<input type="hidden" id="lxb-get-user" onchange="renderUserInfo()" value="0">';
                 $dom += '<div id="lxb-buy-hide" name="lxb-buy-hide" style="margin:0;padding:0;width:960px;height:200px;border:1px double red;background:#373b42;"></div>';
                 $dom += '</div>';
                 $dom += '<script>function showCon(){if($("#lxb").position().left < -10){$("#lxb").animate({left:"0px"}, 300, "swing");}else{$("#lxb").animate({left:"-830px"}, 300, "swing");}}$("#lxb-showCon").click(function(){showCon();});$("#lxb-item-box").click(function(){showCon();});</script>';
@@ -264,8 +289,24 @@ function lxb($, window, $debug) {
             }
         },
         run: function() {
-            lxb.html.init();
-            lxb.app.renderCount();
+            
+            var $url = window.location.href;
+            var $transList = 'www.renrendai.com/transfer/transferList.action';
+            var $loan = 'www.renrendai.com/transfer/loanTransferDetail.action';
+            var $isTransListPage = ($url.indexOf($transList) !== -1) ? true : false;
+            var $isLoanPage = ($url.indexOf($loan) !== -1) ? true : false;
+            if($isTransListPage){
+                lxb.html.init();
+                lxb.app.renderCount();
+                lxb.app.renderUserInfo();
+            }
+            if($isLoanPage){
+                var $m = $('#pg-server-message');
+                if($m){
+                    $(window.parent.document).find('#lxb-buy-hide').append('<div style="color:yellow;">' + $m.attr('data-message') + '</div>');
+                    $(window.parent.document).find('#lxb-get-user').val(Math.random()*1000);
+                }
+            }
         }
 
     };
