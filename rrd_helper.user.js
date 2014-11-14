@@ -274,7 +274,6 @@ function lxb($, window, $debug) {
                 $dom += '<iframe name="lxb-rep-iframe" style="display:none;"></iframe>';
                 $dom += '<div id="lxb-buy-iframe" name="lxb-buy-iframe" style="display:none;"></div>';
                 $dom += '<input type="hidden" id="lxb-buy-hide-id" value="0">';
-                $dom += '<input type="hidden" id="lxb-get-user" onchange="renderUserInfo()" value="0">';
                 $dom += '<div id="lxb-buy-hide" name="lxb-buy-hide" style="display:none;margin:-1px;padding:0;width:960px;height:200px;border:1px double red;background:#373b42;"></div>';
                 $dom += '</div>';
                 $dom += '<script>function showCon(){if($("#lxb").position().left < -10){$("#lxb").animate({left:"0px"}, 300, "swing", function(){$("#lxb-buy-hide").slideDown(300);});}else{$("#lxb-buy-hide").slideUp(300, function(){$("#lxb").animate({left:"-830px"}, 300, "swing");});}}$("#lxb-showCon").click(function(){showCon();});$("#lxb-item-box").click(function(){showCon();});</script>';
@@ -304,7 +303,7 @@ function lxb($, window, $debug) {
                 var $m = $('#pg-server-message');
                 if($m){
                     $(window.parent.document).find('#lxb-buy-hide').append('<div style="color:yellow;">' + $m.attr('data-message') + '</div>');
-                    $(window.parent.document).find('#lxb-get-user').val(Math.random()*1000);
+                    window.parent.renderUserInfo();
                 }
             }
         }
