@@ -11,7 +11,7 @@
 // @require		http://www.renrendai.com/static/js/lib/jquery/1.9.1/jquery.js
 // @icon		http://www.renrendai.com/favicon.ico
 // @run-at		document-idle
-// @version 		1011
+// @version 		1012
 // @updateURL		https://raw.githubusercontent.com/wedv/php-tool/master/rrd_helper.user.js
 // @supportURL		https://github.com/wedv/php-tool
 // @homepage		https://github.com/wedv/php-tool
@@ -209,6 +209,7 @@ function lxb($, window, $debug) {
                 if ($pages <= 1) {
                     $pages = 1;
                 }
+                $('#lxb-buy-hide-id-count').html('0');
                 for (var i = 1; i <= $pages; i++) {
                     var $items = lxb.app.getPage(i);
                     if (!$items) {
