@@ -164,6 +164,9 @@ function lxb($, window, $debug) {
                     }
                 }
                 $('#lxb-showCon').html($c);
+                if($c == 0){
+                    $('#lxb-buy-hide-id-count').html('0');
+                }
                 setTimeout(function() {
                     lxb.app.renderCount();
                 }, $fs);
