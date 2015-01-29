@@ -26,6 +26,9 @@
     <li>
         <a href="https://github.com/wedv/php-tool/tree/master/Model_Upyun.php">PHP Upyun 附加接口</a>
     </li>
+    <li>
+        <a href="https://github.com/wedv/php-tool/tree/master/xls_demo">PHP Excel demo</a>
+    </li>
 </ul>
 
 
