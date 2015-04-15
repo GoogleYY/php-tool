@@ -29,6 +29,9 @@
     <li>
         <a href="https://github.com/wedv/php-tool/tree/master/xls_demo">PHP Excel demo</a>
     </li>
+    <li>
+        <a href="https://github.com/wedv/php-tool/tree/master/chrome_ext">浏览器扩展模版 demo</a>
+    </li>
 </ul>
 
 
