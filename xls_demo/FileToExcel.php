@@ -2,6 +2,8 @@
 ini_set('memory_limit', '2560M');
 require_once 'phpexcel/PHPExcel.php';
 
+define('T_DATE', date('Ymd'));
+
 class FileToXls {
 	
 	public static function cells() {
@@ -29,7 +31,7 @@ class FileToXls {
 			$n++;
 		}
 		$write = new PHPExcel_Writer_Excel2007($phpExcel);
-		$fname = date('Ymd').'_report.xlsx';
+		$fname = T_DATE.'_report.xlsx';
 		$write->save($fname);
 	}
 }
@@ -38,11 +40,11 @@ class FileToXls {
 $ds = DIRECTORY_SEPARATOR;
 $fileBase = dirname(__FILE__).$ds.'..'.$ds.'..'.$ds.'..'.$ds;
 $files = array(
-	'reportDriver_' => $fileBase.date('Ymd').'reportDriver_'.'.json',
-	'dayReportDriver_' => $fileBase.date('Ymd').'dayReportDriver_'.'.json',
-	'detailFaildHasIDCard_' => $fileBase.date('Ymd').'detailFaildHasIDCard_'.'.json',
-	'examNotPass_' => $fileBase.date('Ymd').'examNotPass_'.'.json',
-	'unaudited_' => $fileBase.date('Ymd').'unaudited_'.'.json',
+	'reportDriver_' => $fileBase.T_DATE.'reportDriver_'.'.json',
+	'dayReportDriver_' => $fileBase.T_DATE.'dayReportDriver_'.'.json',
+	'detailFaildHasIDCard_' => $fileBase.T_DATE.'detailFaildHasIDCard_'.'.json',
+	'examNotPass_' => $fileBase.T_DATE.'examNotPass_'.'.json',
+	'unaudited_' => $fileBase.T_DATE.'unaudited_'.'.json',
 );
 
 FileToXls::to($files);
