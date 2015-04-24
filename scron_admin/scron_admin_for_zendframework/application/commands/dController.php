@@ -78,11 +78,12 @@ class dController extends commandController{
             if (You_Application_Utils_CronEntry::timeOk(trim($cronTime))) {
                 $cmd = $cron['command'];
                 $logFileName = $cron['logFile'];
+                //出错是不会停止
                 try {
                     $exec = Model_Cron::cronHandle($cmd, $modelCron->getLogFile($cron));
                 } catch (Exception $e) {
-					var_dump($e);
-				}
+                    var_dump($e);
+                }
                 $modelCron->setRunAt($cron['cronId'], time());
                 echo "\n" . 'exec -- ' . $exec;
             }
