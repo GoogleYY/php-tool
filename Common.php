@@ -3,6 +3,29 @@ class Common {
 	
 
 
+
+    /**
+     * 定时任务开头标准输出
+     * @param unknown_type $str
+     * @return string
+     */
+    public static function jobBegin($str = '')
+    {
+        $ext_str = empty($str) ? '' : trim($str);
+        return "\r\n------" . $ext_str . '------Job start: ' . date('Y-m-d H:i:s', time()) . "------------\r\n";
+    }
+
+    /**
+     * 定时任务结尾标准输出
+     * @param unknown_type $str
+     * @return string
+     */
+    public static function jobEnd($str = '')
+    {
+        $ext_str = empty($str) ? '' : trim($str);
+        return "\r\n------" . $ext_str . '------Job end: ' . date('Y-m-d H:i:s', time()) . "------------\r\n";
+    }
+
     /**
      * 生成随机字符串方法
      * @return int $length
