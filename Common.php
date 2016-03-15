@@ -8,7 +8,7 @@ class Common {
      * @param type $filename    xxx.xls
      * @param type $str         $str .= implode('|', $r) . "\r\n";
      */
-    public function wXls($filename, $str) {
+    public static function wXls($filename, $str) {
         return file_put_contents($filename, mb_convert_encoding(str_replace(array("\t", '|'), array('\t',"\t"),$str), 'gbk'), FILE_APPEND);
     }
 
