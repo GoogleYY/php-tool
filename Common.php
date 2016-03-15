@@ -9,7 +9,7 @@ class Common {
      * @param type $str         $str .= implode('|', $r) . "\r\n";
      */
     public function wXls($filename, $str) {
-        file_put_contents($filename, mb_convert_encoding(str_replace(array("\t", '|'), array('\t',"\t"),$str), 'gbk'), FILE_APPEND);
+        return file_put_contents($filename, mb_convert_encoding(str_replace(array("\t", '|'), array('\t',"\t"),$str), 'gbk'), FILE_APPEND);
     }
 
     /**
