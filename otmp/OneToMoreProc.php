@@ -1,8 +1,5 @@
 <?php
 
-if (!defined('BASEPATH'))
-    exit('No direct script access allowed');
-
 require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'IOneToMoreProc.php';
 
 class OneToMoreProc extends CI_Controller {
