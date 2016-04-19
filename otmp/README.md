@@ -12,10 +12,10 @@
     
     <ul>
         <li>
-            修改OneToMoreProc类中与APPPATH有关的相关参数
+            修改OneToMoreProc这个类所继承的父类名称
         </li>
         <li>
-            修改OneToMoreProc这个类所继承的父类名称
+            修改OneToMoreProc类中与APPPATH有关的相关参数
         </li>
         <li>
             修改OneToMoreProc类中openChildProcessById这个方法里面的$phpPath、$indexPath两个参数的值的获取方式；以及$cmd的格式
